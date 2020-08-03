@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/weswithley/calculator.git"
   },
-  "author": "",
+  "author": "Wesley Wang",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
