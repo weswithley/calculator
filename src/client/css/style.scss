@@ -1,0 +1,102 @@
+@import './toolkit';
+
+$blue: #a7bcd4;
+$darkerBlue: #94a6bb;
+$darkIndigo : #0b0e1c;
+$lighterGreyE : #eeeeee;
+$lighterGreyC : #cccccc;
+$lightGrey : #d4d4d4;
+$darkGrey : #8d8d8d;
+$darkerGrey : #818181;
+$white : #ffffff;
+$fontFamily: Arial, "微軟正黑體";
+
+* {
+  font-family: $fontFamily;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $lighterGreyE;
+  @include fontSize(1rem);
+  font-weight: 100;
+}
+
+.blueBG{
+  background-color: $blue;
+  border: 1px solid $darkerBlue;
+}
+
+.lightGreyBG{
+  background-color: $lightGrey;
+}
+
+.darkGreyBG{
+  background-color: $darkGrey;
+  border: 1px solid $darkerGrey;
+}
+
+.whiteFont{
+  color: $white;
+}
+
+.darkGreyFont{
+  color: $darkGrey;
+}
+
+.pointerNone{
+  pointer-events: none;
+}
+
+.calculator{
+  width:270px;
+  padding: 5px 15px 15px;
+  background: $lightGrey;
+  border: 1px solid $lighterGreyC;
+  cursor: move;
+  @include radius(3px);
+
+  .container{
+    width: 100vw;
+    max-width: 270px;
+    margin: 0 auto 15px;
+  }
+
+  .monitor{
+    @include fontSize($font: 4rem);
+    font-weight: lighter;
+    text-align: right;
+    color: $white;
+    margin: 20px auto 10px;
+  }
+
+  .buttonList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+
+    .button{
+      @include fontSize($font: 1.5rem);
+      width: 55px;
+      height: 55px;
+      margin: 0 auto;
+      outline: 0;
+      @include radius(3px);
+      cursor: pointer;
+      &.font12{
+        @include fontSize($font: 1.25rem);
+      }
+      &.biggerButton{
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        @include radius(3px);
+        text-align: left;
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width:1024px) {}

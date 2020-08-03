@@ -1,0 +1,12 @@
+// mixin
+@mixin radius($radius:3px){
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+@mixin fontSize($font: 1rem){
+  font-size: $font;
+}
